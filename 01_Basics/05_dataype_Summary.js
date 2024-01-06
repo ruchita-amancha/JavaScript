@@ -34,3 +34,35 @@ const myFunction = function(){
 }
 
 // https://262.ecma-international.org/5.1/#sec-11.4.3
+
+
+
+// +++++++++++++++++++++++++++++++++++++++++++++++++++
+//Memoery
+
+// Stack (Primitive) ,Heap (Non-Primitive)
+
+let myYoutubeName = "hitechChaudarydotcom"
+
+let anotherName = myYoutubeName
+anotherName="chaiaurcode"
+
+console.log(myYoutubeName);
+console.log(anotherName);
+
+let userOne = {
+    email: "user@google.com",
+    upi:"user@ybl"
+}
+
+let userTwo = userOne
+
+console.log(userTwo);
+
+userTwo.email="user2@gmail.com"
+
+console.log(userOne.email);
+console.log(userTwo.email);
+
+
+
