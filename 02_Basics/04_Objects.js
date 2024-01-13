@@ -80,3 +80,16 @@ const {courseInstructor : instructor}=course
 console.log(courseInstructor);
 console.log(instructor);
 
+
+//This is JSON Object
+// {
+//     "name":"Ruchita",
+//     "coursename":"Js",
+//     "price":"Free"
+// }
+
+[
+    {},
+    {},
+    {}
+]
