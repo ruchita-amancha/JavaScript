@@ -29,5 +29,5 @@ color.forEach((color) => {
 });
 
 ```
-Hi
+Hii
 
