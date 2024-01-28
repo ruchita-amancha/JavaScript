@@ -4,9 +4,9 @@
 
 [Click here](https://stackblitz.com/edit/dom-project-chaiaurcode?file=index.html)
 
-## project 1
+## project 1 color changer
 
-```javascript
+```javascript 
 
 const color = document.querySelectorAll(".color")
 const body = document.querySelector("body")
@@ -32,13 +32,13 @@ color.forEach((color) => {
 
 ```
 
-# Project 2
+# Project 2 BMI cal
 
 ```javascript
 const form = document.querySelector('form');
 console.log(form);
 
-form.addEventListener('click', (e) => {
+form.addEventListener('submit', (e) => {
   e.preventDefault();
   const height = parseInt(document.querySelector('#height').value);
   const weight = parseInt(document.querySelector('#weight').value);
@@ -66,4 +66,17 @@ form.addEventListener('click', (e) => {
 
 ```
 
+# Project 3 Digital clock
+```javascript
+let clock = document.getElementById('clock')
+
+// let date = new Date()
+// console.log(date.toLocaleTimeString())
+
+setInterval(function (){
+  let date =new Date()
+  // console.log(date.toLocaleTimeString())
+  clock.innerHTML=date.toLocaleTimeString()
+},1000)
+```
 
