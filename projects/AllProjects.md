@@ -4,9 +4,7 @@
 
 [Click here](https://stackblitz.com/edit/dom-project-chaiaurcode?file=index.html)
 
-## project 1 color changer
-
-```javascript 
+```javascript
 
 const color = document.querySelectorAll(".color")
 const body = document.querySelector("body")
