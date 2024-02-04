@@ -1,0 +1,52 @@
+<!-- // xmlHttp Request , ajax -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+</head>
+<body style="background-color: #212121;color:white">
+    <!-- 0	UNSENT	Client has been created. open() not called yet.
+    1	OPENED	open() has been called.
+    2	HEADERS_RECEIVED	send() has been called, and headers and status are available.
+    3	LOADING	Downloading; responseText holds partial data.
+    4	DONE	The operation is complete. -->
+
+    <div class="w3-card-4">
+        <img src="" alt="Alps">
+        <div class="w3-container w3-center">
+          <p id="followers">The Italian / Austrian Alps</p>
+        </div>
+      </div>
+</body>
+<script>
+    const requestURL="https://api.github.com/users/ruchitaamancha"
+    const xhr = new XMLHttpRequest()
+   
+    xhr.open('GET',requestURL) 
+    xhr.onreadystatechange=function(){
+        console.log(xhr.readyState);
+        if(xhr.readyState===4){
+            console.log(this.responseText);
+            const data = this.responseText //saving the responseText in data
+            console.log(typeof data); //data type is string
+            // NOTE: Whenever you get response from URL it is mostly in the form of string
+            //converting string to JSON format
+            const convertedDataInJSON=JSON.parse(this.responseText)
+            console.log(convertedDataInJSON.id);
+            const imSrc= document.querySelector("img")
+            imSrc.src=`${convertedDataInJSON.avatar_url}`
+
+            const para = document.querySelector("#followers")
+            para.innerText=`${convertedDataInJSON.followers}`
+        }
+    } 
+    xhr.send()
+
+
+</script>
+</html>
